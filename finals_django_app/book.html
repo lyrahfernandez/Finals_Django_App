@@ -1,0 +1,14 @@
+<!-- templates/book_list.html -->
+{% extends 'base.html' %}
+
+{% block title %}Book List{% endblock %}
+
+{% block content %}
+    <h2>Book List</h2>
+    <ul>
+        {% for book in books %}
+            <li><a href="{% url 'book_detail' pk=book.pk %}">{{ book.title }}</a></li>
+        {% endfor %}
+    </ul>
+    {% include 'pagination.html' %}
+{% endblock %}

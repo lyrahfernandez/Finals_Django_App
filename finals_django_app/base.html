@@ -1,0 +1,21 @@
+templates/base.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My Django App{% endblock %}</title>
+    <!-- Add Bootstrap and other CSS/JS files here -->
+</head>
+<body>
+    <div id="menu">
+        <!-- Your menu content goes here -->
+    </div>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <div id="footer">
+        <!-- Your footer content goes here -->
+    </div>
+</body>
+</html>
